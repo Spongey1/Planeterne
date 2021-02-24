@@ -8,22 +8,27 @@ namespace Planeterne
 {
     public class Planet
     {
-        public Planet()
-        {
-
-        }
         public string PlanetNames { get; set; }
-        public double mass { get; set; }
+        private double mass { get; set; }
         public double diameter { get; set; }
-        public double density { get; set; }
-        public double gravity { get; set; }
-        public double rotationPeriods { get; set; }
-        public double lengthOfDay { get; set; }
-        public double distanceOfSun { get; set; }
-        public double orbitalPeriods { get; set; }
-        public double orbitalVelocity { get; set; }
+        private double density { get; set; }
+        private double gravity { get; set; }
+        private double rotationPeriods { get; set; }
+        private double lengthOfDay { get; set; }
+        private double distanceOfSun { get; set; }
+        private double orbitalPeriods { get; set; }
+        private double orbitalVelocity { get; set; }
         public int meanTemperatures { get; set; }
-        public int numberOfMoons { get; set; }
-        public bool ringSystem { get; set; }
+        private int numberOfMoons { get; set; }
+        private bool ringSystem { get; set; }
+
+        // Skriver ikke alle værdierne pga. at det ville blive for meget arbejde, men ideen var at alle værdierne skulle skrives som parametre
+        public Planet(string PlanetNames, double mass, double diameter, int meanTemperatures)
+        {
+            this.PlanetNames = PlanetNames;
+            this.mass = mass;
+            this.diameter = diameter;
+            this.meanTemperatures = meanTemperatures;
+        }
     }
 }
